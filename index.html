@@ -16,9 +16,6 @@
     }
 
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       min-height: 100vh;
     }
 
@@ -27,12 +24,28 @@
       text-align: center;
     }
 
+    .logo-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 1815px;
+      margin: 0 auto;
+    }
+
     .logo {
       width: 100%;
-      max-width: 1600px;
       height: auto;
       display: block;
-      margin: 0 auto;
+    }
+
+    .trademark {
+      position: absolute;
+      right: 2.8%;
+      top: 63%;
+      color: #f3cf78;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(16px, 2vw, 34px);
+      line-height: 1;
+      text-shadow: 0 1px 2px rgba(0,0,0,.7);
     }
 
     .status {
@@ -47,13 +60,18 @@
 
 <body>
   <main class="page">
-    <img
-      class="logo"
-      src="logo.png"
-      alt="Cogito, Ergo Creo™"
-    >
+
+    <div class="logo-wrap">
+      <img
+        class="logo"
+        src="logo.png"
+        alt="Cogito, Ergo Creo"
+      >
+      <span class="trademark">™</span>
+    </div>
 
     <div class="status">In Development</div>
+
   </main>
 </body>
 </html>
